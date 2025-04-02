@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Zeking Carding - Achetez des cartes cadeaux physiques personnalisées.">
+  <title>Cyber Carding</title>
+  <link rel="stylesheet" href="Style.css"> <!-- Lien vers le fichier CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"> <!-- Font Awesome -->
+</head>
+<body>
+  <!-- En-tête avec le nom du site -->
+  <header>
+    <div class="container">
+      <h1 class="site-title">Cyber <span>Carding</span></h1>
+    </div>
+  </header>
+
+  <!-- Section des produits -->
+  <section id="products" class="products">
+    <div class="container">
+      <h2>Nos Cartes Cadeaux</h2>
+      <div class="product-grid">
+        <!-- Carte cadeau 1 -->
+        <div class="product-card">
+          <i class="fas fa-gift fa-3x"></i> <!-- Icône cadeau -->
+          <h3>Carte Classic</h3>
+          <p>La <strong>Carte Classic</strong> vous permet de retirer jusqu'à <strong>3000€</strong>. La carte est Valable pendant <strong>30 jours</strong>.</p>
+          <p class="price">Prix : <span>200€</span></p>
+          <button class="btn btn-secondary" onclick="showSummary('Carte Classic', 'La Carte Classic vous permet de retirer jusqu\'à 3000€. La carte est Valable pendant 30 jours.', '200€')">Commander</button>
+        </div>
+        <!-- Carte cadeau 2 -->
+        <div class="product-card">
+          <i class="fas fa-star fa-3x"></i> <!-- Icône étoile -->
+          <h3>Carte Premium</h3>
+          <p>La <strong>Carte Premium</strong> vous permet de retirer jusqu'à <strong>4000€</strong>. La carte est Valable pendant <strong>60 jours</strong>.</p>
+          <p class="price">Prix : <span>300€</span></p>
+          <button class="btn btn-secondary" onclick="showSummary('Carte Premium', 'La Carte Premium vous permet de retirer jusqu\'à 4000€. La carte est Valable pendant 60 jours.', '300€')">Commander</button>
+        </div>
+        <!-- Carte cadeau 3 -->
+        <div class="product-card">
+          <i class="fas fa-crown fa-3x"></i> <!-- Icône couronne -->
+          <h3>Carte Gold</h3>
+          <p>La <strong>Carte Gold</strong> vous permet de retirer jusqu'à <strong>6000€</strong>. La carte est Valable pendant <strong>90 jours</strong>.</p>
+          <p class="price">Prix : <span>400€</span></p>
+          <button class="btn btn-secondary" onclick="showSummary('Carte Gold', 'La Carte Gold vous permet de retirer jusqu\'à 6000€. La carte est Valable pendant 90 jours.', '400€')">Commander</button>
+        </div>
+        <!-- Carte cadeau 4 -->
+        <div class="product-card">
+          <i class="fas fa-gem fa-3x"></i> <!-- Icône diamant -->
+          <h3>Carte Diamant</h3>
+          <p>La <strong>Carte Diamant</strong> vous permet de retirer jusqu'à <strong>8000€</strong>. La carte est Valable pendant <strong>120 jours</strong>.</p>
+          <p class="price">Prix : <span>800€</span></p>
+          <button class="btn btn-secondary" onclick="showSummary('Carte Diamant', 'La Carte Diamant vous permet de retirer jusqu\'à 8000€. La carte est Valable pendant 120 jours.', '800€')">Commander</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section de commande -->
+  <section id="order" class="order">
+    <div class="container">
+      <h2>Résumé de votre commande</h2>
+      <div id="order-summary" class="order-summary">
+        <p>Sélectionnez une carte cadeau pour voir le résumé ici.</p>
+      </div>
+      <p>Pour commander :</p>
+      <ol>
+        <li>Faites une capture d'écran de cette section de la page.</li>
+        <li>Livraison et réception sous 24-48h.</li>
+        <li>Envoyez la capture d'écran à l'un des contacts ci-dessous :</li>
+      </ol>
+      <div class="contact-methods">
+        <p><i class="fab fa-whatsapp"></i> <strong>WhatsApp :</strong> <a href="https://wa.me/447943800251" target="_blank">Cliquez ici</a></p>
+        <p><i class="fab fa-snapchat"></i> <strong>Snapchat :</strong> <a href="https://www.snapchat.com/add/speedpaypal3?" target="_blank">Cliquez ici</a></p>
+        <p><i class="fab fa-telegram"></i> <strong>Telegram :</strong> <a href="https://t.me/cards_cyber" target="_blank">Cliquez ici</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pied de page -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Cyber Carding. Tous droits réservés.</p>
+      <div class="social-links">
+        <a href="https://wa.me/447943800251" target="_blank"><i class="fab fa-whatsapp fa-2x"></i></a> <!-- Icône WhatsApp -->
+        <a href="https://www.snapchat.com/add/speedpaypal3?" target="_blank"><i class="fab fa-snapchat fa-2x"></i></a> <!-- Icône Snapchat -->
+        <a href="https://t.me/cards_cyber" target="_blank"><i class="fab fa-telegram fa-2x"></i></a> <!-- Icône Telegram -->
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script JavaScript -->
+  <script>
+    /**
+     * Affiche le résumé de la carte cadeau sélectionnée dans la section "Résumé de votre commande".
+     * @param {string} title - Le titre de la carte cadeau.
+     * @param {string} description - La description de la carte cadeau.
+     * @param {string} price - Le prix de la carte cadeau.
+     */
+    function showSummary(title, description, price) {
+      const summaryDiv = document.getElementById('order-summary');
+      summaryDiv.innerHTML = `
+        <h3>${title}</h3>
+        <p>${description}</p>
+        <p><strong>Prix :</strong> ${price}</p>
+      `;
+      // Scrolle automatiquement vers la section de commande
+      document.getElementById('order').scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>

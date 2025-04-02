@@ -1,0 +1,137 @@
+/* Styles généraux pour le corps de la page */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #3d021a, #000000);
+    color: #fff;
+}
+
+/* Conteneur principal */
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* En-tête */
+header {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.site-title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.site-title span {
+    color: #ffcc00;
+    text-shadow: 2px 2px 5px rgba(255, 204, 0, 0.7);
+    font-style: italic;
+}
+
+/* Section des produits */
+.products {
+    padding: 20px 0;
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.product-card {
+    background: #222;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    width: calc(50% - 20px);
+}
+
+.product-card i {
+    color: #ffcc00;
+    margin-bottom: 10px;
+}
+
+.product-card h3 {
+    margin: 10px 0;
+}
+
+.product-card .price {
+    color: #ffcc00;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background: #ffcc00;
+    color: #000;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.btn-secondary {
+    background: #fff;
+    color: #000;
+}
+
+/* Section de commande */
+.order {
+    padding: 20px 0;
+    text-align: center;
+}
+
+.contact-methods a {
+    color: #ffcc00;
+    text-decoration: none;
+}
+
+/* Résumé de commande */
+.order-summary {
+    background: #222; /* Fond sombre pour contraster avec le texte */
+    padding: 20px; /* Ajoute un espace intérieur */
+    border-radius: 10px; /* Arrondit les coins */
+    margin: 20px 0; /* Ajoute un espace au-dessus et en dessous */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ajoute une ombre pour un effet 3D */
+    text-align: left; /* Aligne le texte à gauche pour une meilleure lisibilité */
+    color: #fff; /* Couleur du texte */
+}
+
+/* Titre dans le résumé */
+.order-summary h3 {
+    font-size: 1.8rem; /* Taille du titre */
+    color: #ffcc00; /* Couleur jaune pour le titre */
+    margin-bottom: 10px; /* Ajoute un espace sous le titre */
+}
+
+/* Texte dans le résumé */
+.order-summary p {
+    font-size: 1rem; /* Taille du texte */
+    line-height: 1.6; /* Hauteur de ligne pour une meilleure lisibilité */
+    margin: 5px 0; /* Ajoute un léger espace entre les paragraphes */
+}
+
+/* Prix dans le résumé */
+.order-summary p strong {
+    color: #ffcc00; /* Couleur jaune pour mettre en valeur le prix */
+}
+
+/* Pied de page */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #111;
+}
+
+footer .social-links i {
+    color: #ffcc00;
+    margin: 0 10px;
+    font-size: 2rem;
+}
