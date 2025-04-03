@@ -91,7 +91,14 @@
           <h3>Carte Classic</h3>
           <p>La <strong>Carte Classic</strong> vous permet de retirer jusqu'à <strong>3000€</strong>. La carte est Valable pendant <strong>30 jours</strong>.</p>
           <p class="price">Prix : <span>200€</span></p>
-          <button class="btn btn-secondary" onclick="showSummary('Carte Classic', 'La Carte Classic vous permet de retirer jusqu\'à 3000€. La carte est Valable pendant 30 jours.', '200€')">Commander</button>
+          <label for="payment-classic">Mode de paiement :</label>
+          <select id="payment-classic" class="payment-method">
+            <option value="pcs">Ticket de recharge PCS</option>
+            <option value="neosurf">Ticket de recharge Neosurf</option>
+            <option value="bitcoin">Cryptomonnaie Bitcoin (BTC)</option>
+            <option value="transcash">Ticket de recharge Transcash</option>
+          </select>
+          <button class="btn btn-secondary" onclick="showSummary('Carte Classic', 'La Carte Classic vous permet de retirer jusqu\'à 3000€. La carte est Valable pendant 30 jours.', '200€', 'payment-classic')">Commander</button>
         </div>
         <!-- Carte cadeau 2 -->
         <div class="product-card">
@@ -99,7 +106,14 @@
           <h3>Carte Premium</h3>
           <p>La <strong>Carte Premium</strong> vous permet de retirer jusqu'à <strong>4000€</strong>. La carte est Valable pendant <strong>60 jours</strong>.</p>
           <p class="price">Prix : <span>300€</span></p>
-          <button class="btn btn-secondary" onclick="showSummary('Carte Premium', 'La Carte Premium vous permet de retirer jusqu\'à 4000€. La carte est Valable pendant 60 jours.', '300€')">Commander</button>
+          <label for="payment-premium">Mode de paiement :</label>
+          <select id="payment-premium" class="payment-method">
+            <option value="pcs">Ticket de recharge PCS</option>
+            <option value="neosurf">Ticket de recharge Neosurf</option>
+            <option value="bitcoin">Cryptomonnaie Bitcoin (BTC)</option>
+            <option value="transcash">Ticket de recharge Transcash</option>
+          </select>
+          <button class="btn btn-secondary" onclick="showSummary('Carte Premium', 'La Carte Premium vous permet de retirer jusqu\'à 4000€. La carte est Valable pendant 60 jours.', '300€', 'payment-premium')">Commander</button>
         </div>
         <!-- Carte cadeau 3 -->
         <div class="product-card">
@@ -107,7 +121,14 @@
           <h3>Carte Gold</h3>
           <p>La <strong>Carte Gold</strong> vous permet de retirer jusqu'à <strong>6000€</strong>. La carte est Valable pendant <strong>90 jours</strong>.</p>
           <p class="price">Prix : <span>400€</span></p>
-          <button class="btn btn-secondary" onclick="showSummary('Carte Gold', 'La Carte Gold vous permet de retirer jusqu\'à 6000€. La carte est Valable pendant 90 jours.', '400€')">Commander</button>
+          <label for="payment-gold">Mode de paiement :</label>
+          <select id="payment-gold" class="payment-method">
+            <option value="pcs">Ticket de recharge PCS</option>
+            <option value="neosurf">Ticket de recharge Neosurf</option>
+            <option value="bitcoin">Cryptomonnaie Bitcoin (BTC)</option>
+            <option value="transcash">Ticket de recharge Transcash</option>
+          </select>
+          <button class="btn btn-secondary" onclick="showSummary('Carte Gold', 'La Carte Gold vous permet de retirer jusqu\'à 6000€. La carte est Valable pendant 90 jours.', '400€', 'payment-gold')">Commander</button>
         </div>
         <!-- Carte cadeau 4 -->
         <div class="product-card">
@@ -115,7 +136,14 @@
           <h3>Carte Diamant</h3>
           <p>La <strong>Carte Diamant</strong> vous permet de retirer jusqu'à <strong>8000€</strong>. La carte est Valable pendant <strong>120 jours</strong>.</p>
           <p class="price">Prix : <span>800€</span></p>
-          <button class="btn btn-secondary" onclick="showSummary('Carte Diamant', 'La Carte Diamant vous permet de retirer jusqu\'à 8000€. La carte est Valable pendant 120 jours.', '800€')">Commander</button>
+          <label for="payment-diamond">Mode de paiement :</label>
+          <select id="payment-diamond" class="payment-method">
+            <option value="pcs">Ticket de recharge PCS</option>
+            <option value="neosurf">Ticket de recharge Neosurf</option>
+            <option value="bitcoin">Cryptomonnaie Bitcoin (BTC)</option>
+            <option value="transcash">Ticket de recharge Transcash</option>
+          </select>
+          <button class="btn btn-secondary" onclick="showSummary('Carte Diamant', 'La Carte Diamant vous permet de retirer jusqu\'à 8000€. La carte est Valable pendant 120 jours.', '800€', 'payment-diamond')">Commander</button>
         </div>
       </div>
     </div>
@@ -133,6 +161,7 @@
         <li>Faites une capture d'écran de cette section de la page.</li>
         <li>Envoyez la capture d'écran à l'un des contacts ci-dessous :</li>
       </ol>
+      <p><strong>⚠️ Veuillez contacter uniquement si c'est pour une commande. Merci !</strong></p>
       <div class="contact-methods">
         <p><i class="fab fa-whatsapp"></i> <strong>WhatsApp :</strong> <a href="https://wa.me/447943800251" target="_blank">Cliquez ici</a></p>
         <p><i class="fab fa-snapchat"></i> <strong>Snapchat :</strong> <a href="https://www.snapchat.com/add/speedpaypal3?" target="_blank">Cliquez ici</a></p>
@@ -160,13 +189,21 @@
      * @param {string} title - Le titre de la carte cadeau.
      * @param {string} description - La description de la carte cadeau.
      * @param {string} price - Le prix de la carte cadeau.
+     * @param {string} paymentId - L'identifiant du mode de paiement sélectionné.
      */
-    function showSummary(title, description, price) {
+    function showSummary(title, description, price, paymentId) {
+      const paymentMethod = document.getElementById(paymentId).value; // Récupère le mode de paiement sélectionné
+      const paymentText = paymentMethod === 'pcs' ? 'Ticket de recharge PCS' :
+                          paymentMethod === 'neosurf' ? 'Ticket de recharge Neosurf' :
+                          paymentMethod === 'transcash' ? 'Ticket de recharge Transcash' :
+                          'Cryptomonnaie Bitcoin (BTC)';
+
       const summaryDiv = document.getElementById('order-summary');
       summaryDiv.innerHTML = `
         <h3>${title}</h3>
         <p>${description}</p>
         <p><strong>Prix :</strong> ${price}</p>
+        <p><strong>Mode de paiement :</strong> ${paymentText}</p>
       `;
       // Scrolle automatiquement vers la section de commande
       document.getElementById('order').scrollIntoView({ behavior: 'smooth' });
