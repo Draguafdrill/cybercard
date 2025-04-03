@@ -145,6 +145,16 @@ header {
     color: #ffcc00; /* Couleur jaune pour mettre en valeur le prix */
 }
 
+/* Méthodes de paiement */
+.payment-method {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
 /* Responsive design pour les cartes */
 @media (max-width: 768px) {
     .product-card {
