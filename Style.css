@@ -3,7 +3,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to bottom, #3d021a, #000000);
+    background: linear-gradient(to bottom, #1f010d, #503333);
     color: #fff;
 }
 
@@ -82,6 +82,15 @@ header {
     color: #000;
 }
 
+/* Styles pour les images des cartes */
+.product-image {
+    width: 100%; /* L'image occupe toute la largeur du conteneur */
+    height: auto; /* Conserve les proportions de l'image */
+    border-radius: 10px; /* Ajoute des coins arrondis */
+    margin-bottom: 15px; /* Ajoute un espace sous l'image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ajoute une ombre pour un effet 3D */
+}
+
 /* Section de commande */
 .order {
     padding: 20px 0;
@@ -121,6 +130,28 @@ header {
 /* Prix dans le résumé */
 .order-summary p strong {
     color: #ffcc00; /* Couleur jaune pour mettre en valeur le prix */
+}
+
+/* Responsive design pour les cartes */
+@media (max-width: 768px) {
+    .product-card {
+        width: 100%; /* Les cartes occupent toute la largeur sur les petits écrans */
+    }
+}
+
+@media (max-width: 480px) {
+    .product-card {
+        padding: 10px; /* Réduit les marges intérieures pour les très petits écrans */
+    }
+
+    .product-image {
+        border-radius: 5px; /* Réduit l'arrondi des coins pour un affichage plus compact */
+    }
+
+    .btn {
+        padding: 8px 12px; /* Réduit la taille des boutons */
+        font-size: 0.9rem; /* Réduit la taille du texte des boutons */
+    }
 }
 
 /* Pied de page */
