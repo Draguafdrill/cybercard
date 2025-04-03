@@ -51,20 +51,25 @@ header {
     padding: 15px;
     border-radius: 10px;
     text-align: center;
-    width: calc(50% - 20px);
-}
-
-.product-card i {
-    color: #ffcc00;
-    margin-bottom: 10px;
+    width: calc(50% - 20px); /* Deux cartes par ligne */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ajoute une ombre */
 }
 
 .product-card h3 {
     margin: 10px 0;
+    font-size: 1.5rem;
+    color: #ffcc00;
+}
+
+.product-card p {
+    margin: 10px 0;
+    font-size: 1rem;
+    line-height: 1.5;
 }
 
 .product-card .price {
     color: #ffcc00;
+    font-weight: bold;
 }
 
 .btn {
@@ -75,6 +80,7 @@ header {
     text-decoration: none;
     border-radius: 5px;
     margin-top: 10px;
+    font-weight: bold;
 }
 
 .btn-secondary {
@@ -89,6 +95,13 @@ header {
     border-radius: 10px; /* Ajoute des coins arrondis */
     margin-bottom: 15px; /* Ajoute un espace sous l'image */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ajoute une ombre pour un effet 3D */
+}
+
+/* Icônes des cartes */
+.product-card i {
+    color: #ffcc00; /* Couleur jaune pour les icônes */
+    margin-bottom: 15px; /* Espace sous l'icône */
+    display: block; /* Affiche l'icône sur une ligne séparée */
 }
 
 /* Section de commande */
